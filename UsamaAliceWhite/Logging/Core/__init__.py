@@ -87,7 +87,7 @@ class GetLogger:
                 logger_name: str = "Unknown",
                 logger_level: int = logging.DEBUG,
                 *,
-                log_file_path: pathlib.Path = pathlib.Path.home() / "Logs/Unknown.log",
+                log_file_path: pathlib.Path | str = pathlib.Path.home() / "Logs/Unknown.log",
                 log_message_format: str = \
                     "%(asctime)s [%(levelname)-8s] %(name)-15s %(funcName)s:%(lineno)d - %(message)s",
                 log_datetime_format: str = "%Y-%m-%d %H:%M:%S",
@@ -103,7 +103,7 @@ class GetLogger:
                 ) -> logging.Logger:
         instance: GetLogger = super().__new__(cls)
         handler_parameter: HandlerParameter = HandlerParameter(
-            file_path= log_file_path,
+            file_path= pathlib.Path(log_file_path),
             when= handler_when,
             interval= handler_interval,
             backupcount= handler_backupcount,

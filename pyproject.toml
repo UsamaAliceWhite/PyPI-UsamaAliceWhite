@@ -11,7 +11,7 @@ build-backend = "setuptools.build_meta"
 # ライブラリ名
 name = "UsamaAliceWhite"
 # バージョン
-version = "1.0.0"
+version = "1.0.1"
 # ライセンス
 license = {text = "MIT"}
 # 開発者情報

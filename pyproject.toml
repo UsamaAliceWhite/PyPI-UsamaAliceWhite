@@ -1,0 +1,57 @@
+# Copyright 2026 UsamaAliceWhite All Rights Reserved
+
+
+[build-system]
+# ビルドツールのバージョン
+requires = ["setuptools>=61.0"]
+# ビルドツール
+build-backend = "setuptools.build_meta"
+
+[project]
+# ライブラリ名
+name = "UsamaAliceWhite"
+# バージョン
+version = "1.0.0"
+# ライセンス
+license = {text = "MIT"}
+# 開発者情報
+authors = [{name = "UsamaAliceWhite"}]
+# 説明文
+description = "A versatile utility library designed to streamline common development tasks."
+# 説明書
+readme = "README.md"
+# Pythonのバージョン
+requires-python = ">=3.13"
+# 分類子
+classifiers = [
+    # 開発ステータス
+    "Development Status :: 5 - Production/Stable",
+    # 対象ユーザ
+    "Intended Audience :: Developers",
+    # ライセンス
+    "License :: OSI Approved :: MIT License",
+    # OS
+    "Operating System :: OS Independent",
+    # 開発言語
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    # トピック
+    "Topic :: System :: Logging",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.urls]
+# 外部サイト
+"Source" = "https://github.com/UsamaAliceWhite/PyPI-UsamaAliceWhite"
+
+[tool.setuptools.packages.find]
+# ビルド時の初回検索位置
+where = ["."]
+# ビルドの対象パッケージ名
+include = ["UsamaAliceWhite*"]
+
+[tool.setuptools.package-data]
+# py以外に含める拡張子
+"*" = ["*.*"]

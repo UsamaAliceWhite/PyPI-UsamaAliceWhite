@@ -16,7 +16,7 @@ from ..Shared import SingletonPattern
 # Parameter
 @dataclasses.dataclass
 class HandlerParameter:
-    file_path: pathlib.Path = pathlib.Path.home() / "Logs/Unknown.log"
+    file_path: pathlib.Path | str = pathlib.Path.home() / "Logs/Unknown.log"
     when: str = "midnight"
     interval: int = 1
     backupcount: int = 99
